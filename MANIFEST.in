@@ -1,0 +1,3 @@
+include README.txt
+recursive-include webium *.py
+include webium/jquery/jquery-1.10.2.js

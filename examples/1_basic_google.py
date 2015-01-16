@@ -1,19 +1,3 @@
-# Webium
-
-Webium is a Page Object pattern implementation library for Python (http://martinfowler.com/bliki/PageObject.html).
-
-It allows you to extend WebElement class to your custom controls like Link, Button and group them as pages.
-
-Main classes are:
-
-- webium.Find
-- webium.Finds
-- webium.BasePage
-
-Basic usage example:
-
-```python
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from webium.controls.link import Link
@@ -48,6 +32,3 @@ if __name__ == '__main__':
     for item in results_page.results:
         print item.link.text
     get_driver().quit()
-```
-
-More usage details are available here: http://wgnet.github.io/webium/.
