@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Containers &mdash; Webium 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="Webium 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Logical Containers" href="logical_containers.html"/>
+        <link rel="prev" title="Finds" href="finds.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Webium</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
+<li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="find.html">Find</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="find.html#ui-type">ui_type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="find.html#context">context</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="finds.html">Finds</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logical_containers.html">Logical Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#just-in-dom">just_in_dom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#timeout">timeout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wait.html">wait</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Webium</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Containers</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/containers.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="containers">
+<h1>Containers<a class="headerlink" href="#containers" title="Permalink to this headline">¶</a></h1>
+<p>When you are specifying your classes you can perform search within them.
+Using this feature you can narrow search and handle dynamic pages without complex XPath.</p>
+<p>In order to use within your custom objects just declare <tt class="docutils literal"><span class="pre">Find</span></tt> or <tt class="docutils literal"><span class="pre">Finds</span></tt>
+within your classes the same way as they are declared within page objects.</p>
+<p>Consider the page with the following DOM structure:</p>
+<img alt="_images/containers.png" src="_images/containers.png" />
+<p>In order to perform search within each item in the list we can do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.remote.webelement</span> <span class="kn">import</span> <span class="n">WebElement</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">Find</span><span class="p">,</span> <span class="n">Finds</span><span class="p">,</span> <span class="n">BasePage</span>
+
+
+<span class="k">class</span> <span class="nc">Vacancy</span><span class="p">(</span><span class="n">WebElement</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;vacancy_title&#39;</span><span class="p">)</span>
+    <span class="n">profession</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;vacancy_profession&#39;</span><span class="p">)</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;vacancy_location&#39;</span><span class="p">)</span>
+    <span class="n">apply_button</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;vacancy_apply_button&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">VacanciesPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
+    <span class="n">vacancies_list</span> <span class="o">=</span> <span class="n">Finds</span><span class="p">(</span><span class="n">Vacancy</span><span class="p">,</span> <span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">&#39;//div[@id=&quot;careers-vacancies&quot;]/div[@data-id]&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">VacanciesPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.com/en/careers/vacancies/&#39;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">VacanciesPage</span><span class="p">()</span>
+    <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">vacancy</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">vacancies_list</span><span class="p">:</span>
+        <span class="c"># search by CLASS_NAME=&#39;vacancy_title&#39; is performed within one node</span>
+        <span class="k">print</span> <span class="s">&#39;Title: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">vacancy</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="logical_containers.html" class="btn btn-neutral float-right" title="Logical Containers"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="finds.html" class="btn btn-neutral" title="Finds"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Wargaming.NET.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
