@@ -3,6 +3,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from webium.base_page import BasePage
 
 import tests
+from webium.controls.image import Image
 from webium.find import Find, Finds
 from webium.controls.link import Link
 from selenium.webdriver.common.by import By
@@ -33,6 +34,10 @@ class SimplePage(BasePage):
     default_search_type = Find(value='multiline')
     logical_container = Find(SpanContainer)
     '''@type: SpanContainer'''
+    image_with_bad_src = Find(Image, By.ID, 'ImgTagWithBadSrc')
+    '''@type: Image'''
+    valid_image = Find(Image, By.ID, 'validImgTag')
+    '''@type: Image'''
 
     def __init__(self):
         super(SimplePage, self).__init__(url=tests.get_url('simple_page.html'))
