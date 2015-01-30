@@ -17,7 +17,7 @@ setup(
     include_package_data=True,
     author='Wargaming.NET',
     author_email='i_khrol@wargaming.net',
-    url='http://www.wargaming.net/',
+    url='https://github.com/wgnet/webium',
     description='Webium is a Page Object pattern implementation library for Python '
                 '(http://martinfowler.com/bliki/PageObject.html). '
                 'It allows you to extend WebElement class to your custom controls '
