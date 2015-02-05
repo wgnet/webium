@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '1.0.2'
+version = '1.0.3'
 
 setup(
     name='webium',
@@ -25,7 +25,7 @@ setup(
     install_requires=[
         'selenium==2.43',
         'nose==1.3.3',
-        'waiting==1.2.0',
+        'waiting==1.2.1',
     ],
     entry_points={
         'nose.plugins': ['browser_closer = webium.plugins.browser_closer:BrowserCloserPlugin'],
