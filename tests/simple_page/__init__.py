@@ -4,6 +4,7 @@ from webium.base_page import BasePage
 
 import tests
 from webium.controls.image import Image
+from webium.controls.select import Select
 from webium.find import Find, Finds
 from webium.controls.link import Link
 from selenium.webdriver.common.by import By
@@ -38,6 +39,10 @@ class SimplePage(BasePage):
     '''@type: Image'''
     valid_image = Find(Image, By.ID, 'validImgTag')
     '''@type: Image'''
+    multi_select = Find(Select, By.ID, 'id_multiple_select')
+    '''@type: Select'''
+    simple_select = Find(Select, By.ID, 'id_select')
+    '''@type: Select'''
 
     def __init__(self):
         super(SimplePage, self).__init__(url=tests.get_url('simple_page.html'))
