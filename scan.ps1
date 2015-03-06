@@ -9,9 +9,9 @@ trap
 Import-Module virtualenvwrapper
 mkvirtualenv webium
 
-pip install pep8==1.5.6
+pip install pep8==1.5.6 nose==1.3.3
 if ($LastExitCode -ne 0) {
-    throw "Failed to install pep8"
+    throw "Failed to install pep8 and nose"
 }
 
 pip install -e .

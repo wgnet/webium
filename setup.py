@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '1.0.4'
+version = '1.0.5'
 
 setup(
     name='webium',
@@ -23,9 +23,8 @@ setup(
                 'It allows you to extend WebElement class to your custom controls '
                 'like Link, Button and group them as pages.',
     install_requires=[
-        'selenium==2.43',
-        'nose==1.3.3',
-        'waiting==1.2.1',
+        'selenium',
+        'waiting',
     ],
     entry_points={
         'nose.plugins': ['browser_closer = webium.plugins.browser_closer:BrowserCloserPlugin'],
