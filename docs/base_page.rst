@@ -11,6 +11,8 @@ url
 If your page has static url you can specify it in ``__init__``.
 After that you can use ``open()`` method to open your page.
 
+url can be also defined as static attribute of your class.
+
 .. literalinclude:: ../examples/3_base_page_with_url.py
 
 driver

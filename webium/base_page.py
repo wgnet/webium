@@ -34,6 +34,8 @@ def is_element_present(self, element_name, just_in_dom=False, timeout=0):
 
 
 class BasePage(object):
+    url = None
+
     @property
     def _driver(self):
         if self.__driver:
@@ -41,7 +43,8 @@ class BasePage(object):
         return get_driver()
 
     def __init__(self, driver=None, url=None):
-        self.url = url
+        if url:
+            self.url = url
         self.__driver = driver
         self.is_element_present = MethodType(is_element_present, self)
 

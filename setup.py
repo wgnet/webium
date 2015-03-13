@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '1.0.5'
+version = '1.0.6'
 
 setup(
     name='webium',
@@ -24,7 +24,7 @@ setup(
                 'like Link, Button and group them as pages.',
     install_requires=[
         'selenium',
-        'waiting',
+        'waiting>=1.2.1',
     ],
     entry_points={
         'nose.plugins': ['browser_closer = webium.plugins.browser_closer:BrowserCloserPlugin'],

@@ -22,11 +22,10 @@ from webium import BasePage, Find, Finds
 
 
 class GooglePage(BasePage):
-    input = Find(by=By.NAME, value='q')
-    button = Find(by=By.NAME, value='btnK')
+    url = 'http://www.google.com'
 
-    def __init__(self):
-        super(GooglePage, self).__init__(url='http://www.google.com')
+    text_field = Find(by=By.NAME, value='q')
+    button = Find(by=By.NAME, value='btnK')
 
 
 class ResultItem(WebElement):
@@ -41,7 +40,7 @@ class ResultsPage(BasePage):
 if __name__ == '__main__':
     home_page = GooglePage()
     home_page.open()
-    home_page.input.send_keys('Page Object')
+    home_page.text_field.send_keys('Page Object')
     home_page.button.click()
     results_page = ResultsPage()
     print 'Results summary: %s' % results_page.stat.text
