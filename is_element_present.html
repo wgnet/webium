@@ -7,14 +7,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>is_element_present &mdash; Webium 1.0.0 documentation</title>
+  <title>is_element_present &mdash; Webium 1.0.6 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,7 +28,9 @@
   
 
   
-    <link rel="top" title="Webium 1.0.0 documentation" href="index.html"/>
+
+  
+    <link rel="top" title="Webium 1.0.6 documentation" href="index.html"/>
         <link rel="next" title="wait" href="wait.html"/>
         <link rel="prev" title="Logical Containers" href="logical_containers.html"/> 
 
@@ -44,9 +46,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="fa fa-home"> Webium</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+        
+          <a href="index.html" class="fa fa-home"> Webium</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -56,8 +61,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
@@ -80,6 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -110,12 +117,12 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="is-element-present">
 <h1>is_element_present<a class="headerlink" href="#is-element-present" title="Permalink to this headline">¶</a></h1>
 <p>Typical task in test scripts is to check if an element is present.
-Each container (BasePage, physical and logical) has <tt class="docutils literal"><span class="pre">is_element_present</span></tt> method.
+Each container (BasePage, physical and logical) has <code class="docutils literal"><span class="pre">is_element_present</span></code> method.
 It returns if an element with corresponding name is shown on the page.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
 <span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
@@ -138,13 +145,13 @@ It returns if an element with corresponding name is shown on the page.</p>
 </div>
 <div class="section" id="just-in-dom">
 <h2>just_in_dom<a class="headerlink" href="#just-in-dom" title="Permalink to this headline">¶</a></h2>
-<p>By default <tt class="docutils literal"><span class="pre">is_element_present</span></tt> returns <tt class="docutils literal"><span class="pre">True</span></tt> only if an element is visible.
-If you want to have <tt class="docutils literal"><span class="pre">True</span></tt> returned in cases when the element just present in DOM - set <tt class="docutils literal"><span class="pre">just_in_dom=True</span></tt></p>
+<p>By default <code class="docutils literal"><span class="pre">is_element_present</span></code> returns <code class="docutils literal"><span class="pre">True</span></code> only if an element is visible.
+If you want to have <code class="docutils literal"><span class="pre">True</span></code> returned in cases when the element just present in DOM - set <code class="docutils literal"><span class="pre">just_in_dom=True</span></code></p>
 </div>
 <div class="section" id="timeout">
 <h2>timeout<a class="headerlink" href="#timeout" title="Permalink to this headline">¶</a></h2>
-<p><tt class="docutils literal"><span class="pre">timeout</span></tt> in seconds allows you to wait for <tt class="docutils literal"><span class="pre">True</span></tt> value.</p>
-<p><em>Note:</em> if an element is not shown this option will delay <tt class="docutils literal"><span class="pre">False</span></tt> value from being returned.</p>
+<p><code class="docutils literal"><span class="pre">timeout</span></code> in seconds allows you to wait for <code class="docutils literal"><span class="pre">True</span></code> value.</p>
+<p><em>Note:</em> if an element is not shown this option will delay <code class="docutils literal"><span class="pre">False</span></code> value from being returned.</p>
 </div>
 </div>
 
@@ -154,7 +161,7 @@ If you want to have <tt class="docutils literal"><span class="pre">True</span></
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wait.html" class="btn btn-neutral float-right" title="wait"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wait.html" class="btn btn-neutral float-right" title="wait">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="logical_containers.html" class="btn btn-neutral" title="Logical Containers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -170,7 +177,8 @@ If you want to have <tt class="docutils literal"><span class="pre">True</span></
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -186,7 +194,7 @@ If you want to have <tt class="docutils literal"><span class="pre">True</span></
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

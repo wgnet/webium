@@ -7,14 +7,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BasePage &mdash; Webium 1.0.0 documentation</title>
+  <title>BasePage &mdash; Webium 1.0.6 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,7 +28,9 @@
   
 
   
-    <link rel="top" title="Webium 1.0.0 documentation" href="index.html"/>
+
+  
+    <link rel="top" title="Webium 1.0.6 documentation" href="index.html"/>
         <link rel="next" title="Find" href="find.html"/>
         <link rel="prev" title="Welcome to Webium’s documentation!" href="index.html"/> 
 
@@ -44,9 +46,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="index.html" class="fa fa-home"> Webium</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+        
+          <a href="index.html" class="fa fa-home"> Webium</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -56,8 +61,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul class="current">
+          
+          
+              <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">BasePage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#url">url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#driver">driver</a></li>
@@ -80,6 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -110,12 +117,12 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="basepage">
 <h1>BasePage<a class="headerlink" href="#basepage" title="Permalink to this headline">¶</a></h1>
 <p>Page is the main concept of Page Object pattern.
-In order to create your pages you should inherit <tt class="docutils literal"><span class="pre">webium.base_page.BasePage</span></tt>.</p>
+In order to create your pages you should inherit <code class="docutils literal"><span class="pre">webium.base_page.BasePage</span></code>.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span>
 
 
@@ -125,8 +132,9 @@ In order to create your pages you should inherit <tt class="docutils literal"><s
 </div>
 <div class="section" id="url">
 <h2>url<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
-<p>If your page has static url you can specify it in <tt class="docutils literal"><span class="pre">__init__</span></tt>.
-After that you can use <tt class="docutils literal"><span class="pre">open()</span></tt> method to open your page.</p>
+<p>If your page has static url you can specify it in <code class="docutils literal"><span class="pre">__init__</span></code>.
+After that you can use <code class="docutils literal"><span class="pre">open()</span></code> method to open your page.</p>
+<p>url can be also defined as static attribute of your class.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span>
 
 
@@ -142,10 +150,10 @@ After that you can use <tt class="docutils literal"><span class="pre">open()</sp
 </div>
 <div class="section" id="driver">
 <h2>driver<a class="headerlink" href="#driver" title="Permalink to this headline">¶</a></h2>
-<p>Pages should have some <tt class="docutils literal"><span class="pre">WebDriver</span></tt> instance in order to manipulate browser.
-By default Webium will create the instance of <tt class="docutils literal"><span class="pre">WebDriver</span></tt> class specified in <tt class="docutils literal"><span class="pre">`webium.settings.driver_class</span></tt>.
-If you want to get the instance of the the driver you can call <tt class="docutils literal"><span class="pre">webium.driver.get_driver()</span></tt> method.</p>
-<p><tt class="docutils literal"><span class="pre">driver</span></tt> parameter in <tt class="docutils literal"><span class="pre">BasePage</span></tt> gives you an ability to handle WebDriver instance by yourself.</p>
+<p>Pages should have some <code class="docutils literal"><span class="pre">WebDriver</span></code> instance in order to manipulate browser.
+By default Webium will create the instance of <code class="docutils literal"><span class="pre">WebDriver</span></code> class specified in <code class="docutils literal"><span class="pre">`webium.settings.driver_class</span></code>.
+If you want to get the instance of the the driver you can call <code class="docutils literal"><span class="pre">webium.driver.get_driver()</span></code> method.</p>
+<p><code class="docutils literal"><span class="pre">driver</span></code> parameter in <code class="docutils literal"><span class="pre">BasePage</span></code> gives you an ability to handle WebDriver instance by yourself.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">Firefox</span>
 <span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span>
 
@@ -171,7 +179,7 @@ If you want to get the instance of the the driver you can call <tt class="docuti
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="find.html" class="btn btn-neutral float-right" title="Find"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="find.html" class="btn btn-neutral float-right" title="Find">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Welcome to Webium’s documentation!"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -187,7 +195,8 @@ If you want to get the instance of the the driver you can call <tt class="docuti
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -203,7 +212,7 @@ If you want to get the instance of the the driver you can call <tt class="docuti
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

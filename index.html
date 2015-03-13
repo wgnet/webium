@@ -7,14 +7,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Webium’s documentation! &mdash; Webium 1.0.0 documentation</title>
+  <title>Welcome to Webium’s documentation! &mdash; Webium 1.0.6 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -28,7 +28,9 @@
   
 
   
-    <link rel="top" title="Webium 1.0.0 documentation" href="#"/>
+
+  
+    <link rel="top" title="Webium 1.0.6 documentation" href="#"/>
         <link rel="next" title="BasePage" href="base_page.html"/> 
 
   
@@ -43,9 +45,12 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
-        <a href="#" class="fa fa-home"> Webium</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+        
+          <a href="#" class="fa fa-home"> Webium</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -55,8 +60,9 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
-        
-            <ul>
+          
+          
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
@@ -79,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+          
         
       </div>
       &nbsp;
@@ -109,7 +116,7 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document">
             
   <div class="section" id="welcome-to-webium-s-documentation">
 <h1>Welcome to Webium&#8217;s documentation!<a class="headerlink" href="#welcome-to-webium-s-documentation" title="Permalink to this headline">¶</a></h1>
@@ -129,11 +136,10 @@
 
 
 <span class="k">class</span> <span class="nc">GooglePage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="nb">input</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;q&#39;</span><span class="p">)</span>
-    <span class="n">button</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;btnK&#39;</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://www.google.com&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">GooglePage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://www.google.com&#39;</span><span class="p">)</span>
+    <span class="n">text_field</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;q&#39;</span><span class="p">)</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;btnK&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">ResultItem</span><span class="p">(</span><span class="n">WebElement</span><span class="p">):</span>
@@ -148,7 +154,7 @@
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">home_page</span> <span class="o">=</span> <span class="n">GooglePage</span><span class="p">()</span>
     <span class="n">home_page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="n">home_page</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s">&#39;Page Object&#39;</span><span class="p">)</span>
+    <span class="n">home_page</span><span class="o">.</span><span class="n">text_field</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s">&#39;Page Object&#39;</span><span class="p">)</span>
     <span class="n">home_page</span><span class="o">.</span><span class="n">button</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
     <span class="n">results_page</span> <span class="o">=</span> <span class="n">ResultsPage</span><span class="p">()</span>
     <span class="k">print</span> <span class="s">&#39;Results summary: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">results_page</span><span class="o">.</span><span class="n">stat</span><span class="o">.</span><span class="n">text</span>
@@ -190,7 +196,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="base_page.html" class="btn btn-neutral float-right" title="BasePage"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="base_page.html" class="btn btn-neutral float-right" title="BasePage">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -204,7 +210,8 @@
     </p>
   </div>
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
 </footer>
         </div>
       </div>
@@ -220,7 +227,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
