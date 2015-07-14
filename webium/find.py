@@ -1,6 +1,5 @@
 from types import MethodType
 from selenium.webdriver.remote.webelement import WebElement
-from webium.driver import get_driver
 from webium.errors import WebiumException
 from webium.base_page import is_element_present
 
@@ -72,6 +71,7 @@ class Find(object):
             container.find_elements = self.context.find_elements
             self._target_element = container
         self._target_element.is_element_present = MethodType(is_element_present, self._target_element)
+        self._target_element.implicitly_wait = self.context.implicitly_wait
         if len(self.init_args) or len(self.init_kwargs) > 0:
             self._target_element.__init__(*self.init_args, **self.init_kwargs)
 
@@ -84,9 +84,10 @@ class Finds(Find):
             raise WebiumException('Finds is applicable only for WebElements')
 
     def _search_element(self):
-        get_driver().implicitly_wait(0)
+        self.context.implicitly_wait(0)
         self._target_element = self.context.find_elements(self.by, self.value)
-        get_driver().implicitly_wait(webium.settings.implicit_timeout)
+        self.context.implicitly_wait(webium.settings.implicit_timeout)
         for item in self._target_element:
             item.__class__ = self.ui_type
             item.is_element_present = MethodType(is_element_present, item)
+            item.implicitly_wait = self.context.implicitly_wait
