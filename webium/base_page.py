@@ -58,3 +58,6 @@ class BasePage(object):
 
     def find_elements(self, *args):
         return self._driver.find_elements(*args)
+
+    def implicitly_wait(self, *args):
+        return self._driver.implicitly_wait(*args)
