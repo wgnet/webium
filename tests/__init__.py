@@ -1,7 +1,8 @@
 import SimpleHTTPServer
 import SocketServer
-
 from threading import Thread
+
+from webium.driver import close_driver
 
 httpd = SocketServer.TCPServer(('', 0), SimpleHTTPServer.SimpleHTTPRequestHandler)
 PORT = httpd.server_address[1]
@@ -15,7 +16,7 @@ def setup_package():
 
 
 def teardown_package():
-    pass
+    close_driver()
 
 
 def get_url(suffix=''):
