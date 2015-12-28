@@ -1,7 +1,6 @@
 from nose.tools import ok_, eq_
-from tests.simple_page import SimplePageTest
 
-__author__ = 'a_tishenko'
+from tests.simple_page import SimplePageTest
 
 
 class TestSelect(SimplePageTest):

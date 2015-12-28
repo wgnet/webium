@@ -1,6 +1,7 @@
-from tests.simple_page import SimplePageTest
-from tests import get_url
 from nose.tools import eq_
+
+from tests import get_url
+from tests.simple_page import SimplePageTest
 
 
 class TestClick(SimplePageTest):

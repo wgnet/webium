@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
 from webium.controls.click import Clickable
-
-
-__author__ = 'Roman Syrtsov (r_syrtsov@wargaming.net)'
 
 
 class Checkbox(Clickable):
@@ -23,7 +19,7 @@ class Checkbox(Clickable):
         self.set_checked(False)
 
     def set_checked(self, value):
-        u"""
+        """
         Sets the value of the checkbox to the given value.
 
         :Parameters:

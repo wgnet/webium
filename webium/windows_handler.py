@@ -1,11 +1,8 @@
-from webium.driver import get_driver
-import webium.settings
-
 from selenium.common.exceptions import NoAlertPresentException
-
 from waiting import wait
 
-__author__ = 'v_franskevich'
+import webium.settings
+from webium.driver import get_driver
 
 
 class WindowsHandler(object):

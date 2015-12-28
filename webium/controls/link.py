@@ -1,7 +1,5 @@
 from webium.controls.click import Clickable
 
-__author__ = 'Roman Syrtsov (r_syrtsov@wargaming.net)'
-
 
 class Link(Clickable):
     """

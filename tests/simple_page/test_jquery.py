@@ -1,7 +1,7 @@
 from unittest import TestCase
 from webium.jquery import JQuery
 
-from tests.simple_page import SimplePage, SimplePageTest
+from tests.simple_page import SimplePage
 from nose.tools import eq_
 
 
