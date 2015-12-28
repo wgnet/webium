@@ -1,8 +1,5 @@
 from selenium.webdriver.remote.command import Command
 from selenium.webdriver.remote.webelement import WebElement
-from webium.driver import get_driver
-
-__author__ = 'a_bul'
 
 
 class Image(WebElement):

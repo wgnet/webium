@@ -1,7 +1,6 @@
 from selenium.webdriver.remote.webelement import WebElement
-from webium.jquery import JQuery
 
-__author__ = 'm_solonin'
+from webium.jquery import JQuery
 
 
 class Clickable(WebElement):

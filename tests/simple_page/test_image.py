@@ -4,9 +4,6 @@ from tests import get_url
 from tests.simple_page import SimplePageTest
 
 
-__author__ = 'a_bul'
-
-
 class ImageClick(SimplePageTest):
     def test_image_is_displayed(self):
         self.page.valid_image.click()

@@ -8,6 +8,6 @@ wait_timeout = 30
 default_search_type = By.ID
 
 try:
-    from local_webium_settings import *
+    from local_webium_settings import *  # noqa
 except ImportError:
     pass

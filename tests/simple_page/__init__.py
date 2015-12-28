@@ -1,14 +1,15 @@
 from unittest import TestCase
+
+from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
-from webium.base_page import BasePage
 
 import tests
+from webium.base_page import BasePage
+from webium.controls.checkbox import Checkbox
 from webium.controls.image import Image
+from webium.controls.link import Link
 from webium.controls.select import Select
 from webium.find import Find, Finds
-from webium.controls.link import Link
-from selenium.webdriver.common.by import By
-from webium.controls.checkbox import Checkbox
 
 
 class Container(WebElement):

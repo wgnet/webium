@@ -1,7 +1,5 @@
 from webium.driver import get_driver
 
-__author__ = 'm_solonin'
-
 
 class JQuery(object):
     """ JQuery class provides jQuery wrapper for Selenium WebElement.

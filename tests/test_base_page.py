@@ -1,5 +1,7 @@
 from unittest import TestCase
+
 from nose.tools import assert_raises, eq_
+
 import tests
 from webium.base_page import BasePage
 from webium.driver import get_driver

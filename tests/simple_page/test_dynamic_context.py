@@ -1,4 +1,5 @@
 from nose.tools import eq_, assert_raises
+
 from tests.simple_page import SimplePageTest
 from webium.driver import get_driver
 from webium.errors import WebiumException
