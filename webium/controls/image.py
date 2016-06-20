@@ -9,5 +9,12 @@ class Image(WebElement):
     def is_displayed(self):
         is_node_displayed = super(Image, self).is_displayed()
         script = 'return (typeof arguments[0].naturalWidth!="undefined" && arguments[0].naturalWidth>0);'
-        is_image_loaded = lambda: self._execute(Command.EXECUTE_SCRIPT, {'script': script, 'args': [self]})['value']
+
+        def is_image_loaded():
+            result = self._execute(
+                Command.EXECUTE_SCRIPT,
+                {'script': script, 'args': [self]}
+            )
+            return result['value']
+
         return is_node_displayed and is_image_loaded()
