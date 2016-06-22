@@ -1,10 +1,20 @@
 # Webium
 
-[![Build Status](https://travis-ci.org/wgnet/webium.svg?branch=master)](https://travis-ci.org/wgnet/webium)
+[![PyPI](https://img.shields.io/pypi/v/webium.svg?maxAge=2592000)](https://pypi.python.org/pypi/webium)
+[![Python Versions](https://img.shields.io/pypi/pyversions/webium.svg?maxAge=2592000)](https://pypi.python.org/pypi/webium)
+[![Build Status](https://img.shields.io/travis/wgnet/webium/master.svg?maxAge=2592000)](https://travis-ci.org/wgnet/webium)
 
 Webium is a Page Object pattern implementation library for Python (http://martinfowler.com/bliki/PageObject.html).
 
 It allows you to extend WebElement class to your custom controls like Link, Button and group them as pages.
+
+## Installation
+
+The latest stable version is available on PyPI:
+
+    pip install webium
+
+## Usage
 
 Main classes are:
 
@@ -15,7 +25,6 @@ Main classes are:
 Basic usage example:
 
 ```python
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from webium.controls.link import Link
@@ -51,4 +60,4 @@ if __name__ == '__main__':
     get_driver().quit()
 ```
 
-More usage details are available here: http://wgnet.github.io/webium/.
+More usage details are available here: http://wgnet.github.io/webium/
