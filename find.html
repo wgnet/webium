@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Find &mdash; Webium 1.0.6 documentation</title>
+  <title>Find &mdash; Webium 1.1.0 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,12 +30,12 @@
   
 
   
-    <link rel="top" title="Webium 1.0.6 documentation" href="index.html"/>
+    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
         <link rel="next" title="Finds" href="finds.html"/>
         <link rel="prev" title="BasePage" href="base_page.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,11 +45,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> Webium</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Webium
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -57,19 +73,17 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Find</a><ul>
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Find</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ui-type">ui_type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#context">context</a></li>
 </ul>
@@ -77,19 +91,15 @@
 <li class="toctree-l1"><a class="reference internal" href="finds.html">Finds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logical_containers.html">Logical Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#just-in-dom">just_in_dom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#timeout">timeout</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wait.html">wait</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -104,20 +114,29 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>Find</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/find.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/find.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="find">
 <h1>Find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h1>
@@ -128,18 +147,18 @@ By default found element class is <code class="docutils literal"><span class="pr
 <li><code class="docutils literal"><span class="pre">by</span></code> - what search strategy to use</li>
 <li><code class="docutils literal"><span class="pre">value</span></code> - what value should be used to find an element</li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
 
 
 <span class="k">class</span> <span class="nc">SomePage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="n">join_link</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
+    <span class="n">join_link</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">SomePage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SomePage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">SomePage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">join_link</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
@@ -148,27 +167,27 @@ By default found element class is <code class="docutils literal"><span class="pr
 <div class="section" id="ui-type">
 <h2>ui_type<a class="headerlink" href="#ui-type" title="Permalink to this headline">¶</a></h2>
 <p>If you want to specify your own classes for controls <code class="docutils literal"><span class="pre">ui_type</span></code> is the parameter for <code class="docutils literal"><span class="pre">Find</span></code> to use your class.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.remote.webelement</span> <span class="kn">import</span> <span class="n">WebElement</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.remote.webelement</span> <span class="k">import</span> <span class="n">WebElement</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
 
 
 <span class="k">class</span> <span class="nc">Link</span><span class="p">(</span><span class="n">WebElement</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">is_secure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;https://&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;https://&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">TypedPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="n">join_link</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">Link</span><span class="p">,</span> <span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
+    <span class="n">join_link</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">Link</span><span class="p">,</span> <span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s1">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">TypedPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TypedPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">TypedPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s">&#39;Is link secure: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">page</span><span class="o">.</span><span class="n">join_link</span><span class="o">.</span><span class="n">is_secure</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Is link secure: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">join_link</span><span class="o">.</span><span class="n">is_secure</span><span class="p">()))</span>
 </pre></div>
 </div>
 </div>
@@ -176,36 +195,37 @@ By default found element class is <code class="docutils literal"><span class="pr
 <h2>context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
 <p>There are cases when you can&#8217;t specify page structure before actual run. Modern pages are dynamic and fuzzy.
 If you can&#8217;t specify Find as class attribute you should directly provide page object instance to perform search.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Find</span>
 
 
 <span class="k">class</span> <span class="nc">DynamicPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">DynamicPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DynamicPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_link_by_href</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">href</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;a[href*=&quot;</span><span class="si">%s</span><span class="s">&quot;]&#39;</span> <span class="o">%</span> <span class="n">href</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a[href*=&quot;</span><span class="si">{0}</span><span class="s1">&quot;]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">href</span><span class="p">),</span> <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">DynamicPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="n">page</span><span class="o">.</span><span class="n">get_link_by_href</span><span class="p">(</span><span class="s">&#39;registration&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+    <span class="n">page</span><span class="o">.</span><span class="n">get_link_by_href</span><span class="p">(</span><span class="s1">&#39;registration&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="finds.html" class="btn btn-neutral float-right" title="Finds">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="finds.html" class="btn btn-neutral float-right" title="Finds" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="base_page.html" class="btn btn-neutral" title="BasePage"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="base_page.html" class="btn btn-neutral" title="BasePage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -214,13 +234,14 @@ If you can&#8217;t specify Find as class attribute you should directly provide p
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Wargaming.NET.
+        &copy; Copyright 2016, Wargaming.NET.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -235,7 +256,7 @@ If you can&#8217;t specify Find as class attribute you should directly provide p
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.6',
+            VERSION:'1.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

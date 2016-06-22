@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Finds &mdash; Webium 1.0.6 documentation</title>
+  <title>Finds &mdash; Webium 1.1.0 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,12 +30,12 @@
   
 
   
-    <link rel="top" title="Webium 1.0.6 documentation" href="index.html"/>
+    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
         <link rel="next" title="Containers" href="containers.html"/>
         <link rel="prev" title="Find" href="find.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,11 +45,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> Webium</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Webium
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -57,39 +73,29 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="find.html">Find</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="find.html#ui-type">ui_type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="find.html#context">context</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Finds</a></li>
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="find.html">Find</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Finds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logical_containers.html">Logical Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#just-in-dom">just_in_dom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#timeout">timeout</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wait.html">wait</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -104,81 +110,91 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>Finds</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/finds.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/finds.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="finds">
 <h1>Finds<a class="headerlink" href="#finds" title="Permalink to this headline">¶</a></h1>
 <p>Another way to handle dynamic pages where the number of elements is not defined is <code class="docutils literal"><span class="pre">Finds</span></code> class.
 It works the same way as <code class="docutils literal"><span class="pre">Find</span></code> with the same parameters but returns list of elements.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Finds</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Finds</span>
 
 
 <span class="k">class</span> <span class="nc">LinksPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="n">links</span> <span class="o">=</span> <span class="n">Finds</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">TAG_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="n">Finds</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">TAG_NAME</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">LinksPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LinksPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">LinksPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s">&#39;Number of links: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">links</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of links: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">links</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p>And you can even have a dynamic list of typed elements.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.remote.webelement</span> <span class="kn">import</span> <span class="n">WebElement</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Finds</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.remote.webelement</span> <span class="k">import</span> <span class="n">WebElement</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">BasePage</span><span class="p">,</span> <span class="n">Finds</span>
 
 
 <span class="k">class</span> <span class="nc">Link</span><span class="p">(</span><span class="n">WebElement</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">is_secure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;https://&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;https://&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">TypedPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="n">links</span> <span class="o">=</span> <span class="n">Finds</span><span class="p">(</span><span class="n">Link</span><span class="p">,</span> <span class="n">By</span><span class="o">.</span><span class="n">TAG_NAME</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="n">Finds</span><span class="p">(</span><span class="n">Link</span><span class="p">,</span> <span class="n">By</span><span class="o">.</span><span class="n">TAG_NAME</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">TypedPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TypedPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">get_unsecured_links</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">link</span><span class="p">:</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">is_secure</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">links</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">TypedPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s">&#39;Number of unsecured links: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">get_unsecured_links</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of unsecured links: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">get_unsecured_links</span><span class="p">())))</span>
 </pre></div>
 </div>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="containers.html" class="btn btn-neutral float-right" title="Containers">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="containers.html" class="btn btn-neutral float-right" title="Containers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="find.html" class="btn btn-neutral" title="Find"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="find.html" class="btn btn-neutral" title="Find" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -187,13 +203,14 @@ It works the same way as <code class="docutils literal"><span class="pre">Find</
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Wargaming.NET.
+        &copy; Copyright 2016, Wargaming.NET.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -208,7 +225,7 @@ It works the same way as <code class="docutils literal"><span class="pre">Find</
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.6',
+            VERSION:'1.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

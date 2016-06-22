@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Logical Containers &mdash; Webium 1.0.6 documentation</title>
+  <title>Logical Containers &mdash; Webium 1.1.0 documentation</title>
   
 
   
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,12 +30,12 @@
   
 
   
-    <link rel="top" title="Webium 1.0.6 documentation" href="index.html"/>
+    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
         <link rel="next" title="is_element_present" href="is_element_present.html"/>
         <link rel="prev" title="Containers" href="containers.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,11 +45,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> Webium</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Webium
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -57,39 +73,29 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#url">url</a></li>
-<li class="toctree-l2"><a class="reference internal" href="base_page.html#driver">driver</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="find.html">Find</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="find.html#ui-type">ui_type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="find.html#context">context</a></li>
-</ul>
-</li>
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="base_page.html">BasePage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="find.html">Find</a></li>
 <li class="toctree-l1"><a class="reference internal" href="finds.html">Finds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containers.html">Containers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Logical Containers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#just-in-dom">just_in_dom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="is_element_present.html#timeout">timeout</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Logical Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="is_element_present.html">is_element_present</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wait.html">wait</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">settings</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -104,20 +110,29 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>Logical Containers</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/logical_containers.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/logical_containers.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="logical-containers">
 <h1>Logical Containers<a class="headerlink" href="#logical-containers" title="Permalink to this headline">¶</a></h1>
@@ -131,42 +146,43 @@ In such case search will be performed globally on the page but elements are stor
 <li>inheritance from <code class="docutils literal"><span class="pre">WebElement</span></code>, logical containers are not inherited from it</li>
 <li>when declaring a logical container in a Page Object class arguments for <code class="docutils literal"><span class="pre">by</span></code> and <code class="docutils literal"><span class="pre">value</span></code> parameters are not passed in <code class="docutils literal"><span class="pre">Find</span></code> call</li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">webium</span> <span class="kn">import</span> <span class="n">Find</span><span class="p">,</span> <span class="n">BasePage</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">webium</span> <span class="k">import</span> <span class="n">Find</span><span class="p">,</span> <span class="n">BasePage</span>
 
 
 <span class="k">class</span> <span class="nc">Header</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">sign_in</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;a[href*=&quot;auth/oid/new&quot;]&#39;</span><span class="p">)</span>
-    <span class="n">register</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
+    <span class="n">sign_in</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a[href*=&quot;auth/oid/new&quot;]&#39;</span><span class="p">)</span>
+    <span class="n">register</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a[href*=&quot;registration&quot;]&#39;</span><span class="p">)</span>
 
 
 <span class="k">class</span> <span class="nc">StructuredPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
-    <span class="c"># here we are just grouping Header elements together without any influence on actual search</span>
+    <span class="c1"># here we are just grouping Header elements together without any influence on actual search</span>
     <span class="n">header</span> <span class="o">=</span> <span class="n">Find</span><span class="p">(</span><span class="n">Header</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">StructuredPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">StructuredPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net&#39;</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">StructuredPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
-    <span class="k">print</span> <span class="n">page</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">sign_in</span><span class="o">.</span><span class="n">text</span>
-    <span class="k">print</span> <span class="n">page</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">register</span><span class="o">.</span><span class="n">text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">sign_in</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">register</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="is_element_present.html" class="btn btn-neutral float-right" title="is_element_present">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="is_element_present.html" class="btn btn-neutral float-right" title="is_element_present" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="containers.html" class="btn btn-neutral" title="Containers"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="containers.html" class="btn btn-neutral" title="Containers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -175,13 +191,14 @@ In such case search will be performed globally on the page but elements are stor
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Wargaming.NET.
+        &copy; Copyright 2016, Wargaming.NET.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 
@@ -196,7 +213,7 @@ In such case search will be performed globally on the page but elements are stor
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.6',
+            VERSION:'1.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
