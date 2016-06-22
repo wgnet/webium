@@ -15,3 +15,12 @@ before_script:
 script:
   - flake8
   - nosetests -v tests
+deploy:
+  provider: pypi
+  user: wg_webqaa
+  password:
+    secure: DcVhS0+ivUH80Nod578mpOGw0VWt+IatNnek5ALmMEJstt7NZWVuv8ZpknfLWqEoTGcChDcmqnM59uTwEykUqJxQY4PPlKab3sfntp08hTqssIJ2ikvRBeIrTsaUGyzu+jpa4x1bDRtQmcxzjH6JtT45QsCHnvWvOpjpTI34X/w=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: wgnet/webium
