@@ -13,5 +13,5 @@ class PresencePage(BasePage):
 if __name__ == '__main__':
     page = PresencePage()
     page.open()
-    print 'This should be True: %s' % page.is_element_present('join_link')
-    print 'This should be False: %s' % page.is_element_present('no_such_link')
+    print('This should be True: ' + str(page.is_element_present('join_link')))
+    print('This should be False: ' + str(page.is_element_present('no_such_link')))

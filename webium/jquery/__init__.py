@@ -19,9 +19,9 @@ class JQuery(object):
 
     def __getattr__(self, name):
         def jquery_func(*args):
-            jquery = 'return $(arguments[0]).%(func)s(%(args)s);' % {
-                'func': name,
-                'args': ','.join(['arguments[%d]' % (1 + i) for i in xrange(len(args))])
-            }
+            jquery = 'return $(arguments[0]).{func}({args});'.format(
+                func=name,
+                args=','.join(['arguments[%d]' % (1 + i) for i in range(len(args))])
+            )
             return self.driver.execute_script(jquery, self.element, *args)
         return jquery_func

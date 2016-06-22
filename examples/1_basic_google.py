@@ -27,7 +27,7 @@ if __name__ == '__main__':
     home_page.text_field.send_keys('Page Object')
     home_page.button.click()
     results_page = ResultsPage()
-    print 'Results summary: %s' % results_page.stat.text
+    print('Results summary: ' + results_page.stat.text)
     for item in results_page.results:
-        print item.link.text
+        print(item.link.text)
     get_driver().quit()

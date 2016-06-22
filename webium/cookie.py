@@ -8,7 +8,7 @@ WEB_DRIVER_COOKIE_KEYS_MAP = {
 
 
 def _to_unicode_if_str(s):
-    if isinstance(s, str):
+    if isinstance(s, bytes):
         try:
             return s.decode('utf-8')
         except UnicodeDecodeError:

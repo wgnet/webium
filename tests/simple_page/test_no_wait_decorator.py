@@ -13,7 +13,7 @@ class TestNoWaitDecorator(SimplePageTest):
         start = time.time()
         self.method_with_decorator()
         exec_time = time.time() - start
-        ok_(exec_time < 3, 'Execution took too much time %s' % exec_time)
+        ok_(exec_time < 3, 'Execution took too much time: ' + str(exec_time))
 
     def tearDown(self):
         webium.driver.get_driver().implicitly_wait(webium.settings.implicit_timeout)

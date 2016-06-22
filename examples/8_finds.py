@@ -12,4 +12,4 @@ class LinksPage(BasePage):
 if __name__ == '__main__':
     page = LinksPage()
     page.open()
-    print 'Number of links: %s' % len(page.links)
+    print('Number of links: ' + str(len(page.links)))

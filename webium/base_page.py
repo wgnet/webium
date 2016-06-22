@@ -20,7 +20,7 @@ def is_element_present(self, element_name, just_in_dom=False, timeout=0):
         def is_displayed():
             element = getattr(self, element_name, None)
             if not element:
-                raise WebiumException('No element "%s" within container %s' % (element_name, self))
+                raise WebiumException('No element "{0}" within container {1}'.format(element_name, self))
             return element.is_displayed()
 
         is_displayed() if just_in_dom else wait(lambda: is_displayed(), timeout_seconds=timeout)

@@ -18,5 +18,5 @@ class StructuredPage(BasePage):
 if __name__ == '__main__':
     page = StructuredPage()
     page.open()
-    print page.header.sign_in.text
-    print page.header.register.text
+    print(page.header.sign_in.text)
+    print(page.header.register.text)

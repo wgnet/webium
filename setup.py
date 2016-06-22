@@ -11,6 +11,9 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
     packages=[
         'webium',
@@ -24,6 +27,7 @@ setup(
                 'It allows you to extend WebElement class to your custom controls '
                 'like Link, Button and group them as pages.',
     install_requires=[
+        'future>=0.14',
         'selenium',
         'waiting>=1.2.1',
     ],

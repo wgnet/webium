@@ -21,4 +21,4 @@ class TypedPage(BasePage):
 if __name__ == '__main__':
     page = TypedPage()
     page.open()
-    print 'Number of unsecured links: %s' % len(page.get_unsecured_links())
+    print('Number of unsecured links: ' + str(len(page.get_unsecured_links())))

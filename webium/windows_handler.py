@@ -26,7 +26,7 @@ class WindowsHandler(object):
     def new_window(self):
         new_handles = set(self._driver.window_handles)
         new_handles = new_handles - self._snapshot_of_handles
-        return iter(new_handles).next()
+        return next(iter(new_handles))
 
     @property
     def active_window(self):

@@ -14,8 +14,8 @@ class TestClick(SimplePageTest):
         eq_(paragraphs[1].text, 'after pre')
 
     def test_custom_elements(self):
-        anchors = self.page.anchor_list
-        eq_(filter(lambda x: x.get_href(), anchors)[0].get_href(), get_url('resultPage.html'))
+        hrefs = [a.get_href() for a in self.page.anchor_list if a.get_href()]
+        eq_(hrefs[0], get_url('resultPage.html'))
 
     def test_is_element_present(self):
         divs = self.page.div_list

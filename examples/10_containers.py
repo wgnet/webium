@@ -22,4 +22,4 @@ if __name__ == '__main__':
     page.open()
     for vacancy in page.vacancies_list:
         # search by CLASS_NAME='vacancy_title' is performed within one node
-        print 'Title: %s' % vacancy.title.text
+        print('Title: ' + vacancy.title.text)

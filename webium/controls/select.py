@@ -60,7 +60,7 @@ class Select(WebElement):
 
         @params text - string visible text
         """
-        xpath = './/option[normalize-space(.) = %s]' % self._escape_string(text)
+        xpath = './/option[normalize-space(.) = {0}]'.format(self._escape_string(text))
         opts = self.find_elements_by_xpath(xpath)
         matched = False
         for opt in opts:
@@ -75,7 +75,7 @@ class Select(WebElement):
             if sub_string_without_space == "":
                 candidates = self.get_options()
             else:
-                xpath = ".//option[contains(.,%s)]" % self._escape_string(sub_string_without_space)
+                xpath = ".//option[contains(.,{0})]".format(self._escape_string(sub_string_without_space))
                 candidates = self.find_elements_by_xpath(xpath)
             for candidate in candidates:
                 if text == candidate.text:
@@ -84,7 +84,7 @@ class Select(WebElement):
                         return
                     matched = True
         if not matched:
-            raise NoSuchElementException("Could not locate element with visible text: %s" % text)
+            raise NoSuchElementException("Could not locate element with visible text: " + str(text))
 
     @staticmethod
     def _escape_string(value):
@@ -92,7 +92,7 @@ class Select(WebElement):
             substrings = value.split('"')
             result = ['concat(']
             for substring in substrings:
-                result.append('"%s"' % substring)
+                result.append('"{0}"'.format(substring))
                 result.append(', \'"\', ')
             result.pop()
             if value.endswith('"'):
@@ -100,9 +100,9 @@ class Select(WebElement):
             return ''.join(result) + ')'
 
         if '"' in value:
-            return "'%s'" % value
+            return "'{0}'".format(value)
 
-        return '"%s"' % value
+        return '"{0}"'.format(value)
 
     @staticmethod
     def _get_longest_token(value):

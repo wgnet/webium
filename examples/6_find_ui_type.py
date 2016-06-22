@@ -18,4 +18,4 @@ class TypedPage(BasePage):
 if __name__ == '__main__':
     page = TypedPage()
     page.open()
-    print 'Is link secure: %s' % page.join_link.is_secure()
+    print('Is link secure: ' + str(page.join_link.is_secure()))
