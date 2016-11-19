@@ -1,8 +1,8 @@
 # Webium
 
-[![PyPI](https://img.shields.io/pypi/v/webium.svg?maxAge=2592000)](https://pypi.python.org/pypi/webium)
-[![Python Versions](https://img.shields.io/pypi/pyversions/webium.svg?maxAge=2592000)](https://pypi.python.org/pypi/webium)
-[![Build Status](https://img.shields.io/travis/wgnet/webium/master.svg?maxAge=2592000)](https://travis-ci.org/wgnet/webium)
+[![PyPI](https://img.shields.io/pypi/v/webium.svg?maxAge=3600)](https://pypi.python.org/pypi/webium)
+[![Python Versions](https://img.shields.io/pypi/pyversions/webium.svg?maxAge=3600)](https://pypi.python.org/pypi/webium)
+[![Build Status](https://img.shields.io/travis/wgnet/webium/master.svg?maxAge=3600)](https://travis-ci.org/wgnet/webium)
 
 Webium is a Page Object pattern implementation library for Python (http://martinfowler.com/bliki/PageObject.html).
 
