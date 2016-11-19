@@ -9,6 +9,7 @@ class DynamicPage(BasePage):
     def get_link_by_href(self, href):
         return Find(by=By.CSS_SELECTOR, value='a[href*="{0}"]'.format(href), context=self)
 
+
 if __name__ == '__main__':
     page = DynamicPage()
     page.open()
