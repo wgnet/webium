@@ -10,7 +10,10 @@ from webium.errors import WebiumException
 
 def is_element_present(self, element_name, just_in_dom=False, timeout=0):
     def _get_driver():
-        driver = getattr(self, '_driver', None)
+        try:
+            driver = getattr(self, '_driver')
+        except AttributeError:
+            driver = getattr(self, 'parent', None)
         if driver:
             return driver
         return get_driver()
