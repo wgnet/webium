@@ -21,8 +21,8 @@ deploy:
   provider: pypi
   user: wg_webqaa
   password:
-    secure: DcVhS0+ivUH80Nod578mpOGw0VWt+IatNnek5ALmMEJstt7NZWVuv8ZpknfLWqEoTGcChDcmqnM59uTwEykUqJxQY4PPlKab3sfntp08hTqssIJ2ikvRBeIrTsaUGyzu+jpa4x1bDRtQmcxzjH6JtT45QsCHnvWvOpjpTI34X/w=
+    secure: "PWaowyka8yJR8lBjCcGyQxiZG9k46puVMtZ2RFhciH1SwJaSYbxDjkuT0eJPNOkiaB9RYr1+Fe+XhJ1MjB1hMsOJYmFLXkM4uxrehDfpUc16qK3tcE4ke/33sZvOmPj9fULKmwkDgE1HtSGEc9zHjA6I3TeJfoFzNf9W+hvFJDs="
   on:
     tags: true
-    distributions: sdist bdist_wheel
+    distributions: sdist
     repo: wgnet/webium
