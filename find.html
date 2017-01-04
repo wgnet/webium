@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Find &mdash; Webium 1.1.0 documentation</title>
+  <title>Find &mdash; Webium 1.2.1 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Webium 1.2.1 documentation" href="index.html"/>
         <link rel="next" title="Finds" href="finds.html"/>
         <link rel="prev" title="BasePage" href="base_page.html"/> 
 
@@ -60,7 +63,7 @@
             
             
               <div class="version">
-                1.1
+                1.2
               </div>
             
           
@@ -128,7 +131,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/find.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/find.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -206,6 +209,7 @@ If you can&#8217;t specify Find as class attribute you should directly provide p
     <span class="k">def</span> <span class="nf">get_link_by_href</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">href</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Find</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;a[href*=&quot;</span><span class="si">{0}</span><span class="s1">&quot;]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">href</span><span class="p">),</span> <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
 
+
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">DynamicPage</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
@@ -256,7 +260,7 @@ If you can&#8217;t specify Find as class attribute you should directly provide p
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'1.2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BasePage &mdash; Webium 1.1.0 documentation</title>
+  <title>BasePage &mdash; Webium 1.2.1 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Webium 1.2.1 documentation" href="index.html"/>
         <link rel="next" title="Find" href="find.html"/>
         <link rel="prev" title="Welcome to Webium’s documentation!" href="index.html"/> 
 
@@ -60,7 +63,7 @@
             
             
               <div class="version">
-                1.1
+                1.2
               </div>
             
           
@@ -128,7 +131,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/base_page.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/base_page.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -161,6 +164,7 @@ After that you can use <code class="docutils literal"><span class="pre">open()</
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PageWithUrl</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.com/&#39;</span><span class="p">)</span>
 
+
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">PageWithUrl</span><span class="p">()</span>
     <span class="n">page</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
@@ -180,6 +184,7 @@ If you want to get the instance of the the driver you can call <code class="docu
 <span class="k">class</span> <span class="nc">DriverHandlingPage</span><span class="p">(</span><span class="n">BasePage</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DriverHandlingPage</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://wargaming.net/&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">my_driver</span> <span class="o">=</span> <span class="n">Firefox</span><span class="p">()</span>
@@ -233,7 +238,7 @@ If you want to get the instance of the the driver you can call <code class="docu
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'1.2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

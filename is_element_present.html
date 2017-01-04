@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>is_element_present &mdash; Webium 1.1.0 documentation</title>
+  <title>is_element_present &mdash; Webium 1.2.1 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="Webium 1.1.0 documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Webium 1.2.1 documentation" href="index.html"/>
         <link rel="next" title="wait" href="wait.html"/>
         <link rel="prev" title="Logical Containers" href="logical_containers.html"/> 
 
@@ -60,7 +63,7 @@
             
             
               <div class="version">
-                1.1
+                1.2
               </div>
             
           
@@ -128,7 +131,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/is_element_present.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/is_element_present.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -162,6 +165,12 @@ It returns if an element with corresponding name is shown on the page.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This should be False: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">is_element_present</span><span class="p">(</span><span class="s1">&#39;no_such_link&#39;</span><span class="p">)))</span>
 </pre></div>
 </div>
+<p><em>Note</em>: Containers with elements located via <code class="docutils literal"><span class="pre">Finds</span></code> also support
+<code class="docutils literal"><span class="pre">is_element_present</span></code>, albeit with special behaviour. Since the attribute will
+be a list of elements, rather than a single element, <code class="docutils literal"><span class="pre">True</span></code> will be returned
+only if all elements in the list are present. In the event that no elements are
+found (i.e. an empty list), or one or more elements do not qualify as present,
+<code class="docutils literal"><span class="pre">False</span></code> will be returned.</p>
 <div class="section" id="just-in-dom">
 <h2>just_in_dom<a class="headerlink" href="#just-in-dom" title="Permalink to this headline">¶</a></h2>
 <p>By default <code class="docutils literal"><span class="pre">is_element_present</span></code> returns <code class="docutils literal"><span class="pre">True</span></code> only if an element is visible.
@@ -215,7 +224,7 @@ If you want to have <code class="docutils literal"><span class="pre">True</span>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'1.2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
