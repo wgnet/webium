@@ -7,6 +7,13 @@ It returns if an element with corresponding name is shown on the page.
 
 .. literalinclude:: ../examples/12_is_element_present.py
 
+*Note*: Containers with elements located via ``Finds`` also support
+``is_element_present``, albeit with special behaviour. Since the attribute will
+be a list of elements, rather than a single element, ``True`` will be returned
+only if all elements in the list are present. In the event that no elements are
+found (i.e. an empty list), or one or more elements do not qualify as present,
+``False`` will be returned.
+
 just_in_dom
 -----------
 

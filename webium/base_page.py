@@ -21,9 +21,15 @@ def is_element_present(self, element_name, just_in_dom=False, timeout=0):
     _get_driver().implicitly_wait(timeout)
     try:
         def is_displayed():
-            element = getattr(self, element_name, None)
-            if not element:
+            try:
+                element = getattr(self, element_name)
+            except AttributeError:
                 raise WebiumException('No element "{0}" within container {1}'.format(element_name, self))
+            if isinstance(element, list):
+                if element:
+                    return all(ele.is_displayed() for ele in element)
+                else:
+                    return False
             return element.is_displayed()
 
         is_displayed() if just_in_dom else wait(lambda: is_displayed(), timeout_seconds=timeout)
